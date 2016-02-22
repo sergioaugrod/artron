@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'artron'
+require 'pry'
+
+connection_params = {
+  mqtt: {
+    host: 'localhost', 
+    username: '',
+    password: '',
+    port: 1883,
+    ssl: false
+  },
+  worker: {
+    port: '/dev/cu.usbmodem1421'
+  }
+}
+
+Artron::Client.new(connection_params).work
+
+Pry.start
