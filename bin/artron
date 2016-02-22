@@ -6,7 +6,7 @@ require 'pry'
 
 connection_params = {
   mqtt: {
-    host: 'localhost', 
+    host: 'localhost',
     username: '',
     password: '',
     port: 1883,

@@ -3,10 +3,10 @@ require 'mqtt'
 module Artron
   class MQTT
     attr_accessor :host, :username, :password, :port, :ssl
-    
+
     def initialize(attrs)
       attrs.each_pair do |key, value|
-        self.send("#{key}=", value)
+        send("#{key}=", value)
       end
     end
 

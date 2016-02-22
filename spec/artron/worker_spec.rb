@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Artron::Worker do
   let(:port) { '/dev/1234' }
-  let(:instance) { Artron::Worker.new(port) } 
+  let(:instance) { Artron::Worker.new(port) }
 
   describe '#initialize' do
     subject { described_class.new(port) }
@@ -11,7 +11,7 @@ describe Artron::Worker do
   end
 
   describe '.connection_types' do
-    let(:connection_types) { [{name: :arduino}] }
+    let(:connection_types) { [{ name: :arduino }] }
 
     subject { described_class.connection_types }
 
@@ -19,7 +19,7 @@ describe Artron::Worker do
   end
 
   describe '.device_types' do
-    let(:device_types) { [{name: :sensor}, {name: :sensor}] }
+    let(:device_types) { [{ name: :sensor }, { name: :sensor }] }
 
     subject { described_class.device_types }
 

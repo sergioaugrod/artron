@@ -11,7 +11,7 @@ RSpec.describe Artron::Client do
         username: '',
         password: '',
         port: 1883,
-        ssl: false 
+        ssl: false
       }
     }
   end
@@ -34,7 +34,7 @@ RSpec.describe Artron::Client do
     end
 
     context 'when mqtt has invalid params' do
-      let(:params) do 
+      let(:params) do
         {
           worker: {
             port: '/dev/981231'
@@ -43,7 +43,7 @@ RSpec.describe Artron::Client do
         }
       end
 
-      it { expect{subject}.to raise_error(RuntimeError) }
+      it { expect { subject }.to raise_error(RuntimeError) }
     end
 
     context 'when worker has invalid params' do
@@ -54,7 +54,7 @@ RSpec.describe Artron::Client do
             username: '',
             password: '',
             port: 1883,
-            ssl: false 
+            ssl: false
           }
         }
       end
@@ -64,7 +64,7 @@ RSpec.describe Artron::Client do
         expect(mqtt_instance).to receive(:connect).and_return(mqtt_client_instance)
       end
 
-      it { expect{subject}.to raise_error(NoMethodError) }
+      it { expect { subject }.to raise_error(NoMethodError) }
     end
   end
 

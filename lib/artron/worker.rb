@@ -10,11 +10,11 @@ module Artron
     end
 
     def self.connection_types
-      [{name: :arduino}]
+      [{ name: :arduino }]
     end
 
     def self.device_types
-      [{name: :sensor}, {name: :sensor}]
+      [{ name: :sensor }, { name: :sensor }]
     end
 
     private
@@ -23,8 +23,8 @@ module Artron
       {}.tap do |params|
         params[:connections] = { arduino: { adaptor: :firmata, port: @port } }
         params[:devices] = {
-          sensor: { driver: :analog_sensor, pin: 0, interval: 0.25, upper: 1023, lower: 100},
-          sensor: { driver: :analog_sensor, pin: 1}
+          sensor: { driver: :analog_sensor, pin: 0, interval: 0.25, upper: 1023, lower: 100 },
+          sensor: { driver: :analog_sensor, pin: 1 }
         }
       end
     end

@@ -29,7 +29,7 @@ describe Artron::Conversors do
     context 'when invalid temperature' do
       let(:temperature) { -1 }
 
-      it { expect{subject}.to raise_error(Math::DomainError) }
+      it { expect { subject }.to raise_error(Math::DomainError) }
     end
   end
 end
