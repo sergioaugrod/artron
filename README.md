@@ -1,6 +1,6 @@
 # Artron
 
-Communicates with temperature sensors and luminosity connected to an Arduino and publishes a MQTT broker. I used gem [Artoo](https://github.com/hybridgroup/artoo) to perform communication with the Arduino.
+Communicates with sensors(temperature and luminosity) connected to an Arduino and publishes to a MQTT broker. I used gem [Artoo](https://github.com/hybridgroup/artoo) to perform communication with the Arduino.
 
 ## Installation
 
@@ -15,7 +15,7 @@ Change `connection_params` in [bin/artron](https://github.com/sergioaugrod/artro
 ```ruby
 connection_params = {
   mqtt: {
-    host: 'localhost', 
+    host: 'localhost',
     username: '',
     password: '',
     port: 1883,
@@ -28,7 +28,7 @@ connection_params = {
 ```
 
 ```console
-$ bin/artron 
+$ bin/artron
 ```
 
 ## Contributing
